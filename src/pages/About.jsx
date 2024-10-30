@@ -5,6 +5,7 @@ import {loadSnowPreset} from "tsparticles-preset-snow";
 import Particles from "react-particles";
 import Footer from "../components/Footer.jsx";
 import {useTheme} from "../theme/ThemeContext.jsx";
+import Navbar from "../components/Navbar.jsx";
 
 const options = {
     "fullScreen": {
@@ -136,7 +137,7 @@ const About = ()=>{
     }
     return(
         <>
-
+            <Navbar/>
         <section className="max-container">
             <h1 className="head-text">
                 <span

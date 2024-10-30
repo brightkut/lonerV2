@@ -3,12 +3,14 @@ import {Link} from "react-router-dom";
 import {arb, ary} from '../assets/icons'
 import {useTheme} from "../theme/ThemeContext.jsx";
 import Footer from "../components/Footer.jsx";
+import Navbar from "../components/Navbar.jsx";
 
 const Projects = ()=>{
     const { theme, toggleTheme } = useTheme();
 
     return(
         <>
+            <Navbar/>
         <section className="max-container">
             <h1 className="head-text">
                 <span
