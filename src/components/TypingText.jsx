@@ -4,6 +4,7 @@ import {profiles} from "../constant/index.js";
 import {NavLink} from "react-router-dom";
 import {PiFinnTheHumanFill} from "react-icons/pi";
 import {HiArchiveBox} from "react-icons/hi2";
+import {BsFillSkipForwardFill} from "react-icons/bs";
 
 export default function TypingText() {
     const [title, setTitle] = useState('');
@@ -52,6 +53,12 @@ export default function TypingText() {
         };
     }, [title, description, fullTitle, fullDescription]);
 
+    const handleSkip = () => {
+        setShowIcons(true)
+        setTitle(fullTitle)
+        setDescription(fullDescription)
+    }
+
     return (
         <>
             <h1 className="text-3xl font-bold">{title}</h1>
@@ -61,13 +68,15 @@ export default function TypingText() {
             {showIcons && (
                 <>
                     <div className="flex h-10 mt-5 mb-5 items-center animate-slide-up">
-                        <NavLink to='/about' className="w-24 h-10 px-2 mx-3 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
+                        <NavLink to='/about'
+                                 className="w-24 h-10 px-2 mx-3 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
                             <p className="text-black">About</p>
-                            <PiFinnTheHumanFill className="pl-2" size="2em" />
+                            <PiFinnTheHumanFill className="pl-2" size="2em"/>
                         </NavLink>
-                        <NavLink to='/projects' className="w-24 h-10 px-2 mx-3 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
+                        <NavLink to='/projects'
+                                 className="w-24 h-10 px-2 mx-3 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
                             <p className="text-black">Project</p>
-                            <HiArchiveBox className="pl-2" size="2em" />
+                            <HiArchiveBox className="pl-2" size="2em"/>
                         </NavLink>
                     </div>
                     <div className="flex h-10 mt-20 items-center animate-slide-up">
@@ -90,6 +99,10 @@ export default function TypingText() {
                     </div>
                 </>
             )}
+            {showIcons ? false : <div className="absolute bottom-2 right-2 flex mt-2 mb-2 mx-2 px-2">
+                <p className="mt-2 mx-2">Skip</p>
+                <button onClick={handleSkip}><BsFillSkipForwardFill className="mt-2" size="2em"/></button>
+            </div>}
         </>
     );
 }
