@@ -1,6 +1,9 @@
 import {useState, useEffect} from 'react';
 import { FaGithub, FaInstagram, FaLinkedin, FaSteam } from "react-icons/fa";
 import {profiles} from "../constant/index.js";
+import {NavLink} from "react-router-dom";
+import {PiFinnTheHumanFill} from "react-icons/pi";
+import {HiArchiveBox} from "react-icons/hi2";
 
 export default function TypingText() {
     const [title, setTitle] = useState('');
@@ -56,24 +59,36 @@ export default function TypingText() {
 
             {/* Conditionally render icons after description typing completes */}
             {showIcons && (
-                <div className="flex h-10 mt-5 mb-5  items-center animate-slide-up">
-                    <a href={profiles.githubUrl} target="_blank" rel="noopener noreferrer"
-                       className="mx-4 text-green-800 hover:text-green-600">
-                        <FaGithub size="2em"/>
-                    </a>
-                    <a href={profiles.linkedInUrl} target="_blank" rel="noopener noreferrer"
-                       className="mx-4 text-blue-700 hover:text-blue-500">
-                        <FaLinkedin size="2em"/>
-                    </a>
-                    <a href={profiles.steamUrl} target="_blank" rel="noopener noreferrer"
-                       className="mx-4 text-black hover:text-gray-700">
-                        <FaSteam size="2em"/>
-                    </a>
-                    <a href={profiles.instagramUrl} target="_blank" rel="noopener noreferrer"
-                       className="mx-4 text-pink-600 hover:text-pink-400">
-                        <FaInstagram size="2em"/>
-                    </a>
-                </div>
+                <>
+                    <div className="flex h-10 mt-5 mb-5 items-center animate-slide-up">
+                        <NavLink to='/about' className="w-24 h-10 px-2 mx-3 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
+                            <p className="text-black">About</p>
+                            <PiFinnTheHumanFill className="pl-2" size="2em" />
+                        </NavLink>
+                        <NavLink to='/projects' className="w-24 h-10 px-2 mx-3 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
+                            <p className="text-black">Project</p>
+                            <HiArchiveBox className="pl-2" size="2em" />
+                        </NavLink>
+                    </div>
+                    <div className="flex h-10 mt-20 items-center animate-slide-up">
+                        <a href={profiles.githubUrl} target="_blank" rel="noopener noreferrer"
+                           className="mx-4 text-green-800 hover:text-green-600">
+                            <FaGithub size="2em"/>
+                        </a>
+                        <a href={profiles.linkedInUrl} target="_blank" rel="noopener noreferrer"
+                           className="mx-4 text-blue-700 hover:text-blue-500">
+                            <FaLinkedin size="2em"/>
+                        </a>
+                        <a href={profiles.steamUrl} target="_blank" rel="noopener noreferrer"
+                           className="mx-4 text-black hover:text-gray-700">
+                            <FaSteam size="2em"/>
+                        </a>
+                        <a href={profiles.instagramUrl} target="_blank" rel="noopener noreferrer"
+                           className="mx-4 text-pink-600 hover:text-pink-400">
+                            <FaInstagram size="2em"/>
+                        </a>
+                    </div>
+                </>
             )}
         </>
     );
