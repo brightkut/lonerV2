@@ -168,8 +168,9 @@ export const experiences = [
         iconBg: "#fffef7",
         date: "Jun 2024 - Present",
         points: [
-            "Designed and implemented new features for the project involving Payment Gateway as a Service\n" +
-            "project.",
+            "Designed and implemented new features for the Biznext project, a mobile banking solution for\n" +
+            "businesses.",
+            "Investigated and resolved the issue to support our bank customer."
         ],
     },
     {
