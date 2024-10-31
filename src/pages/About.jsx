@@ -8,6 +8,7 @@ import {useTheme} from "../theme/ThemeContext.jsx";
 import Navbar from "../components/Navbar.jsx";
 import React, {useCallback} from "react";
 import {soundoff, soundon} from "../assets/icons/index.js";
+import {profile} from "../assets/images/index.js";
 
 const options = {
     "fullScreen": {
@@ -160,7 +161,7 @@ const About = ({isPlayingMusic , setIsPlayingMusic})=>{
                         </div>
 
                         <div className="relative z-10 flex justify-center items-center">
-                            <img src="https://i.ibb.co/H7cnW0Q/profile.jpg"
+                            <img src={profile}
                                  alt="profile"
                                  className='profile rounded-full w-64 h-64 object-cover'
                             />

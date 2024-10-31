@@ -5,6 +5,7 @@ import allz from './allz.jpeg'
 import ibm from './ibm.png'
 import u from './u.png'
 import c from './c.png'
+import profile from './profile.jpeg'
 
 export {
     accenture,
@@ -13,5 +14,6 @@ export {
     allz,
     ibm,
     u,
-    c
+    c,
+    profile
 }
