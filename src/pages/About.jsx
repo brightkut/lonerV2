@@ -6,6 +6,7 @@ import Particles from "react-particles";
 import Footer from "../components/Footer.jsx";
 import {useTheme} from "../theme/ThemeContext.jsx";
 import Navbar from "../components/Navbar.jsx";
+import {useCallback} from "react";
 
 const options = {
     "fullScreen": {
@@ -113,24 +114,31 @@ const options = {
         "size": "cover"
     },
     style: {
-        width: "100%",
-        height: "400px",
-        position: "relative"
+        width: "5000px",
+        height: "5000px",
     },
 };
 
 const About = ()=>{
-    const { theme, toggleTheme } = useTheme();
+    const { theme } = useTheme();
 
-    const getAge = (birthDateStr) =>{
+    const getAge = useCallback((birthDateStr) => {
         const birthDate = new Date(birthDateStr);
 
         // Get the current date
         const currentDate = new Date();
 
         // Calculate the difference between the current date and the birthdate
-        return currentDate.getFullYear() - birthDate.getFullYear();
-    }
+        const age = currentDate.getFullYear() - birthDate.getFullYear();
+
+        // Adjust if the birthday hasn't occurred this year yet
+        const monthDifference = currentDate.getMonth() - birthDate.getMonth();
+        if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < birthDate.getDate())) {
+            return age - 1;
+        }
+
+        return age;
+    }, []);
 
     const customInit = async (engine) => {
         await loadSnowPreset(engine);
@@ -153,7 +161,7 @@ const About = ()=>{
                     <div className="relative z-10 flex justify-center items-center">
                         <img src="https://i.ibb.co/H7cnW0Q/profile.jpg"
                              alt="profile"
-                             className='profile rounded-full w-64 h-64 object-contain'
+                             className='profile rounded-full w-64 h-64 object-cover'
                         />
                     </div>
                 </div>
