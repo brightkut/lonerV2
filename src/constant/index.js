@@ -1,6 +1,5 @@
 import {accenture, allz, c, ibm, one, opn, u} from "../assets/images";
 import {
-    contact,
     css,
     express,
     git,
@@ -11,7 +10,6 @@ import {
     go,
     spring,
     python,
-    linkedin,
     mongodb,
     nodejs,
     react,

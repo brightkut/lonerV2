@@ -1,4 +1,3 @@
-import hero from './hero.jpg'
 import accenture from './accenture.png'
 import opn from './opn.png'
 import one from './one.png'
@@ -8,7 +7,6 @@ import u from './u.png'
 import c from './c.png'
 
 export {
-    hero,
     accenture,
     opn,
     one,
