@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'gray-glow': '0 4px 15px rgba(128, 128, 128, 0.5)', // Light gray shadow
+        'white-glow': '0 4px 15px rgba(255, 255, 255, 0.5)',
+      },
       keyframes: {
         'slide-up': {
           '0%': { transform: 'translateY(20px)', opacity: '0' },

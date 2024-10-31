@@ -163,7 +163,7 @@ const About = ({isPlayingMusic , setIsPlayingMusic})=>{
                         <div className="relative z-10 flex justify-center items-center">
                             <img src={profile}
                                  alt="profile"
-                                 className='profile rounded-full w-64 h-64 object-cover'
+                                 className='profile rounded-full w-64 h-64 object-cover hadow-gray-glow dark:shadow-white-glow'
                             />
                         </div>
                     </div>
