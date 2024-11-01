@@ -130,7 +130,7 @@ const Projects = ({isPlayingMusic, setIsPlayingMusic})=>{
         <>
             <Navbar/>
             <section className="max-container">
-                <div className="absolute inset-0 z-0 w-full">
+                <div className="absolute inset-0 z-0 h-12  w-full">
                     <Particles options={options} init={customInit}/>
                 </div>
                 <h1 className="head-text">
