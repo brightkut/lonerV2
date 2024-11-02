@@ -30,6 +30,25 @@ import ary from './ary.png'
 import book from './book.png'
 import web from './web.png'
 import spin from './spin.png'
+import tail from './tail.svg'
+import cyp from './Cypress.svg'
+import docker from './Docker.svg'
+import gitbook from './GitBook.svg'
+import gitlab from './GitLab.svg'
+import terraform from './HashiCorp Terraform.svg'
+import heroku from './Heroku.svg'
+import jenkins from './Jenkins.svg'
+import kibana from './Kibana.svg'
+import k8s from './Kubernetes.svg'
+import mysql from './MySQL.svg'
+import nest from './Nest.js.svg'
+import redis from './Redis.svg'
+import ruby from './Ruby on Rails.svg'
+import sqlite from './SQLite.svg'
+import swagger from './Swagger.svg'
+import dynamodb from './DynamoDB.svg'
+import robot from './robotframework-svgrepo-com.svg'
+
 
 export {
     css,
@@ -63,5 +82,23 @@ export {
     ary,
     book,
     web,
-    spin
+    spin,
+    tail,
+    cyp,
+    docker,
+    gitbook,
+    gitlab,
+    terraform,
+    heroku,
+    jenkins,
+    kibana,
+    k8s,
+    mysql,
+    nest,
+    redis,
+    ruby,
+    sqlite,
+    swagger,
+    dynamodb,
+    robot
 }

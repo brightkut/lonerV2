@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar.jsx";
 import React, {useCallback} from "react";
 import {soundoff, soundon} from "../assets/icons/index.js";
 import {profile} from "../assets/images/index.js";
+import {Link} from "react-router-dom";
 
 const options = {
     "fullScreen": {
@@ -116,8 +117,9 @@ const options = {
         "size": "cover"
     },
     style: {
-        width: "5000px",
-        height: "5000px",
+        width: "100%",
+        height: "300px",
+        position: "relative"
     },
 };
 
@@ -156,7 +158,7 @@ const About = ({isPlayingMusic , setIsPlayingMusic})=>{
 
                 <div className="mt-5 text-slate-500 dark:text-slate-300">
                     <div className="relative flex justify-center items-center mt-12 mb-12 w-full ">
-                        <div className="absolute inset-0 z-0 w-full">
+                        <div className="absolute inset-0 z-0 h-full w-full">
                             <Particles options={options} init={customInit}/>
                         </div>
 
@@ -183,19 +185,21 @@ const About = ({isPlayingMusic , setIsPlayingMusic})=>{
                     </h3>
                     <div className='mt-16 flex flex-wrap gap-12'>
                         {skills.map((skill) => (
-                            <div className="flex-col" key={skill.name}>
-                                <div className='block-container w-20 h-20' key={skill.name}>
-                                    <div className='btn-back rounded-xl bg-slate-200'/>
-                                    <div className='btn-front rounded-xl flex justify-center items-center bg-slate-200'>
-                                        <img
-                                            src={skill.imageUrl}
-                                            alt={skill.name}
-                                            className='w-1/2 h-1/2 object-contain'
-                                        />
+                            <Link to={skill.link} key={skill.name} className="no-underline">
+                                <div className="flex-col w-20 justify-center">
+                                    <div className='block-container w-20 h-20'>
+                                        <div className='btn-back rounded-xl bg-slate-200'/>
+                                        <div className='btn-front rounded-xl flex justify-center items-center bg-slate-200'>
+                                            <img
+                                                src={skill.imageUrl}
+                                                alt={skill.name}
+                                                className='w-1/2 h-1/2 object-contain'
+                                            />
+                                        </div>
                                     </div>
+                                    <p className="justify-center text-center mt-2 font-medium dark:text-slate-200">{skill.name}</p>
                                 </div>
-                                <p className="justify-center text-center mt-2 font-medium dark:text-slate-200">{skill.name}</p>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

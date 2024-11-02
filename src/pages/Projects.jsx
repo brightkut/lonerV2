@@ -130,9 +130,9 @@ const Projects = ({isPlayingMusic, setIsPlayingMusic})=>{
         <>
             <Navbar/>
             <section className="max-container">
-                <div className="absolute inset-0 z-0 h-12  w-full">
-                    <Particles options={options} init={customInit}/>
-                </div>
+                {/*<div className="absolute inset-0 z-0 h-12  w-full">*/}
+                {/*    <Particles options={options} init={customInit}/>*/}
+                {/*</div>*/}
                 <h1 className="head-text">
                 <span
                     className="blue-gradient_text2 dark:yellow-gradient_text font-semibold drop-shadow">My Projects</span>

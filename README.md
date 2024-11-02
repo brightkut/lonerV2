@@ -11,6 +11,7 @@ This repository contains the source code for my personal resume website, designe
 6. [Vertical Timeline Component](https://www.npmjs.com/package/react-vertical-timeline-component)
 7. [React Router](https://reactrouter.com/en/main)
 8. [React Icon](https://react-icons.github.io/react-icons/)
+9. [Tech Icon](https://techicons.dev/)
 
 ### Deployment
 We use [Firebase](https://firebase.google.com/) to hosting and [Github Actions](https://github.com/features/actions) for CI/CD.

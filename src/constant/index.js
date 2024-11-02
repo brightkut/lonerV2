@@ -15,128 +15,275 @@ import {
     react,
     redux,
     sass,
-    typescript, aws, dota, elastic, intelij, kafka, kotlin, postgres, book, web
+    typescript,
+    aws,
+    dota,
+    elastic,
+    intelij,
+    kafka,
+    kotlin,
+    postgres,
+    book,
+    web,
+    tail,
+    cyp,
+    docker,
+    gitbook,
+    gitlab,
+    terraform, heroku, jenkins, kibana, k8s, mysql, nest, redis, ruby, sqlite, swagger, dynamodb, robot
 } from "../assets/icons";
 
-
+// programming language ,libray/framework/test , database/monitoring , queue , deploy/cloud , tools
 export const skills = [
-    {
-        imageUrl: aws,
-        name: "AWS",
-        type: "Cloud",
-    },
     {
         imageUrl: css,
         name: "CSS",
-        type: "Frontend",
+        type: "programming language",
+        link: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
     },
+    {
+        imageUrl: go,
+        name: "Golang",
+        type: "programming language",
+        link: 'https://go.dev/'
+    },
+    {
+        imageUrl: html,
+        name: "HTML",
+        type: "programming language",
+        link: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+    },
+    {
+        imageUrl: java,
+        name: "Java",
+        type: "programming language",
+        link: 'https://www.java.com/en/'
+    },
+    {
+        imageUrl: javascript,
+        name: "JavaScript",
+        type: "programming language",
+        link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+    },
+    {
+        imageUrl: kotlin,
+        name: "Kotlin",
+        type: "programming language",
+        link: 'https://kotlinlang.org/'
+    },
+    {
+        imageUrl: python,
+        name: "Python",
+        type: "programming language",
+        link: 'https://www.python.org/'
+    },
+    {
+        imageUrl: typescript,
+        name: "TypeScript",
+        type: "programming language",
+        link: 'https://www.typescriptlang.org/'
+    },
+    {
+        imageUrl: cyp,
+        name: "Cypress",
+        type: "library or framework or test",
+        link: 'https://www.cypress.io/'
+    },
+    {
+        imageUrl: express,
+        name: "Express",
+        type: "library or framework or test",
+        link: 'https://expressjs.com/'
+    },
+    {
+        imageUrl: nest,
+        name: "Nestjs",
+        type: "library or framework or test",
+        link: 'https://nestjs.com/'
+    },
+    {
+        imageUrl: nodejs,
+        name: "Node.js",
+        type: "library or framework or test",
+        link: 'https://nodejs.org/en'
+    },
+    {
+        imageUrl: react,
+        name: "React",
+        type: "library or framework or test",
+        link: 'https://react.dev/'
+    },
+    {
+        imageUrl: redux,
+        name: "Redux",
+        type: "library or framework or test",
+        link: 'https://redux.js.org/'
+    },
+    {
+        imageUrl: robot,
+        name: "Robot Framework",
+        type: "programming language",
+        link: 'https://robotframework.org/'
+    },
+    {
+        imageUrl: ruby,
+        name: "Ruby on Rails",
+        type: "library or framework or test",
+        link: 'https://rubyonrails.org/'
+    },
+    {
+        imageUrl: sass,
+        name: "Sass",
+        type: "library or framework or test",
+        link: 'https://sass-lang.com/'
+    },
+    {
+        imageUrl: spring,
+        name: "Spring",
+        type: "library or framework or test",
+        link: 'https://spring.io/'
+    },
+    {
+        imageUrl: tail,
+        name: "Tailwind",
+        type: "library or framework or test",
+        link: 'https://tailwindcss.com/'
+    },
+    {
+        imageUrl: dynamodb,
+        name: "Dynamo DB",
+        type: "database or monitoring",
+        link: 'https://aws.amazon.com/th/pm/dynamodb/?trk=da3ca203-9906-45ed-8827-a11c3e7dc726&sc_channel=ps&ef_id=CjwKCAjw-JG5BhBZEiwAt7JR6w2uloppXm4IQ-lj1W2chpIwY9jWeQigBJru4oLQJo5c0Y0UtqDY9hoCiGoQAvD_BwE:G:s&s_kwcid=AL!4422!3!589053691163!e!!g!!dynamodb!16178327173!136912409887&gclid=CjwKCAjw-JG5BhBZEiwAt7JR6w2uloppXm4IQ-lj1W2chpIwY9jWeQigBJru4oLQJo5c0Y0UtqDY9hoCiGoQAvD_BwE'
+    },
+    {
+        imageUrl: elastic,
+        name: "Elastic",
+        type: "database or monitoring",
+        link: 'https://www.elastic.co/elasticsearch'
+    },
+    {
+        imageUrl: kibana,
+        name: "Kibana",
+        type: "database or monitoring",
+        link: 'https://www.elastic.co/kibana'
+    },
+    {
+        imageUrl: mongodb,
+        name: "MongoDB",
+        type: "database or monitoring",
+        link: 'https://www.mongodb.com/'
+    },
+    {
+        imageUrl: mysql,
+        name: "MySQL",
+        type: "database or monitoring",
+        link: 'https://www.mysql.com/'
+    },
+    {
+        imageUrl: postgres,
+        name: "Postgres",
+        type: "database or monitoring",
+        link: 'https://www.postgresql.org/'
+    },
+    {
+        imageUrl: redis,
+        name: "Redis",
+        type: "database or monitoring",
+        link: 'https://redis.io/'
+    },
+    {
+        imageUrl: sqlite,
+        name: "Sqlite",
+        type: "database or monitoring",
+        link: 'https://www.sqlite.org/'
+    },
+    {
+        imageUrl: kafka,
+        name: "Kafka",
+        type: "queue",
+        link: 'https://kafka.apache.org/'
+    },
+    {
+        imageUrl: aws,
+        name: "AWS",
+        type: "cloud",
+        link: 'https://aws.amazon.com/'
+    },
+    {
+        imageUrl: docker,
+        name: "Docker",
+        type: "cloud",
+        link: 'https://www.docker.com/'
+    },
+    {
+        imageUrl: heroku,
+        name: "Heroku",
+        type: "cloud",
+        link: 'https://www.heroku.com/'
+    },
+    {
+        imageUrl: jenkins,
+        name: "Jenkins",
+        type: "cloud",
+        link: 'https://www.jenkins.io/'
+    },
+    {
+        imageUrl: k8s,
+        name: "Kubernetes",
+        type: "cloud",
+        link: 'https://kubernetes.io/'
+    },
+    {
+        imageUrl: terraform,
+        name: "Terraform",
+        type: "cloud",
+        link: 'https://www.terraform.io/'
+    },
+    {
+        imageUrl: git,
+        name: "Git",
+        type: "tools",
+        link: 'https://git-scm.com/'
+    },
+    {
+        imageUrl: gitbook,
+        name: "GitBook",
+        type: "tools",
+        link: 'https://www.gitbook.com/'
+    },
+    {
+        imageUrl: gitlab,
+        name: "GitLab",
+        type: "tools",
+        link: 'https://about.gitlab.com/'
+    },
+    {
+        imageUrl: github,
+        name: "GitHub",
+        type: "tools",
+        link: 'https://github.com/'
+    },
+    {
+        imageUrl: intelij,
+        name: "Intelij",
+        type: "tools",
+        link: 'https://www.jetbrains.com/idea/'
+    },
+    {
+        imageUrl: swagger,
+        name: "Swagger",
+        type: "tools",
+        link: 'https://swagger.io/'
+    }
+];
+
+export const hobbies = [
     {
         imageUrl: dota,
         name: "Dota2",
         type: "Game",
     },
-    {
-        imageUrl: elastic,
-        name: "Elastic search",
-        type: "Database",
-    },
-    {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
-    },
-    {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
-    },
-    {
-        imageUrl: go,
-        name: "Golang",
-        type: "Backend",
-    },
-    {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: intelij,
-        name: "Intelij",
-        type: "Editor",
-    },
-    {
-        imageUrl: java,
-        name: "Java",
-        type: "Backend",
-    },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: kafka,
-        name: "Apache Kafka",
-        type: "Queue",
-    },
-    {
-        imageUrl: kotlin,
-        name: "Kotlin",
-        type: "Backend",
-    },
-    {
-        imageUrl: mongodb,
-        name: "MongoDB",
-        type: "Database",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: postgres,
-        name: "Postgres",
-        type: "Database",
-    },
-    {
-        imageUrl: python,
-        name: "Python",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
-    {
-        imageUrl: spring,
-        name: "Spring Boot",
-        type: "Backend",
-    },
-    {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
-    }
-];
-
+]
 export const educations = [
     {
         title: "Internship of summer student training program",
