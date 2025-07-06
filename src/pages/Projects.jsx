@@ -1,11 +1,11 @@
-import {projects} from "../constant/index.js";
-import {Link} from "react-router-dom";
-import {arb, ary, soundoff, soundon} from '../assets/icons'
-import {useTheme} from "../theme/ThemeContext.jsx";
+import { projects } from "../constant/index.js";
+import { Link } from "react-router-dom";
+import { arb, ary, soundoff, soundon } from '../assets/icons'
+import { useTheme } from "../theme/ThemeContext.jsx";
 import Footer from "../components/Footer.jsx";
 import Navbar from "../components/Navbar.jsx";
 import Particles from "react-particles";
-import {loadSnowPreset} from "tsparticles-preset-snow";
+import { loadSnowPreset } from "tsparticles-preset-snow";
 import React from "react";
 
 const options = {
@@ -119,23 +119,23 @@ const options = {
     },
 };
 
-const Projects = ({isPlayingMusic, setIsPlayingMusic})=>{
-    const { theme} = useTheme();
+const Projects = ({ isPlayingMusic, setIsPlayingMusic }) => {
+    const { theme } = useTheme();
 
     const customInit = async (engine) => {
         await loadSnowPreset(engine);
     }
 
-    return(
+    return (
         <>
-            <Navbar/>
+            <Navbar />
             <section className="max-container">
                 {/*<div className="absolute inset-0 z-0 h-12  w-full">*/}
                 {/*    <Particles options={options} init={customInit}/>*/}
                 {/*</div>*/}
                 <h1 className="head-text">
-                <span
-                    className="blue-gradient_text2 dark:yellow-gradient_text font-semibold drop-shadow">My Projects</span>
+                    <span
+                        className="blue-gradient_text2 dark:yellow-gradient_text font-semibold drop-shadow">My Projects</span>
                 </h1>
 
                 <p className='text-slate-500 dark:text-slate-300 mt-2 leading-relaxed'>
@@ -154,7 +154,7 @@ const Projects = ({isPlayingMusic, setIsPlayingMusic})=>{
                     {projects.filter(p => p.type === 'blog').map((project) => (
                         <div className='lg:w-[400px] w-full dark:text-white' key={project.name}>
                             <div className='block-container w-12 h-12'>
-                                <div className={`btn-back rounded-xl ${project.theme}`}/>
+                                <div className={`btn-back rounded-xl ${project.theme}`} />
                                 <div className='btn-front rounded-xl flex justify-center items-center'>
                                     <img
                                         src={project.iconUrl}
@@ -197,7 +197,7 @@ const Projects = ({isPlayingMusic, setIsPlayingMusic})=>{
                     {projects.filter(p => p.type === 'web').map((project) => (
                         <div className='lg:w-[400px] w-full dark:text-white' key={project.name}>
                             <div className='block-container w-12 h-12'>
-                                <div className={`btn-back rounded-xl ${project.theme}`}/>
+                                <div className={`btn-back rounded-xl ${project.theme}`} />
                                 <div className='btn-front rounded-xl flex justify-center items-center'>
                                     <img
                                         src={project.iconUrl}
@@ -232,7 +232,7 @@ const Projects = ({isPlayingMusic, setIsPlayingMusic})=>{
                     ))}
                 </div>
             </section>
-            <Footer/>
+            <Footer />
             <div className="w-1/2 h-ful pr-8">
                 <div className="fixed bottom-2 left-2">
                     <img

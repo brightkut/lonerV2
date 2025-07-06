@@ -30,6 +30,9 @@ const Navbar = () => {
                 <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-blue-500 dark:text-yellow-500' : 'text-black dark:text-gray-500'}>
                     Projects
                 </NavLink>
+                <NavLink to="/blogs" className={({ isActive }) => isActive ? 'text-blue-500 dark:text-yellow-500' : 'text-black dark:text-gray-500'}>
+                    Blogs
+                </NavLink>
                 {pathName === '/' ? false : <ul className="flex items-center">
                     <li className="mx-3">
                         <button

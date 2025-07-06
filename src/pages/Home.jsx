@@ -5,6 +5,7 @@ import Model from "../components/Model";
 import { soundoff, soundon } from "../assets/icons/index.js";
 import { NavLink } from "react-router-dom";
 import { PiFinnTheHumanFill } from "react-icons/pi";
+import { GiNotebook } from "react-icons/gi";
 import { HiArchiveBox } from "react-icons/hi2";
 import { profiles } from "../constant/index.js";
 import { FaGithub, FaInstagram, FaLinkedin, FaSteam } from "react-icons/fa";
@@ -103,27 +104,12 @@ const Home = ({ isPlayingMusic, setIsPlayingMusic }) => {
                                     <p className="text-black">Project</p>
                                     <HiArchiveBox className="pl-2" size="2em" />
                                 </NavLink>
+                                <NavLink to='/blogs'
+                                    className="w-24 h-10 px-2 mx-3 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
+                                    <p className="text-black">Blog</p>
+                                    <GiNotebook className="pl-2" size="1.5em" />
+                                </NavLink>
                             </div>
-                            {/* <div className="flex justify-center mt-20"> */}
-                            {/*     <div className="flex w-1/2 h-10 py-6 px-0 items-center justify-center animate-slide-up rounded-xl shadow-md"> */}
-                            {/*         <a href={profiles.githubUrl} target="_blank" rel="noopener noreferrer" */}
-                            {/*             className="mx-4 text-green-600 hover:text-green-800"> */}
-                            {/*             <FaGithub size="2em" /> */}
-                            {/*         </a> */}
-                            {/*         <a href={profiles.linkedInUrl} target="_blank" rel="noopener noreferrer" */}
-                            {/*             className="mx-4 text-blue-500 hover:text-blue-800"> */}
-                            {/*             <FaLinkedin size="2em" /> */}
-                            {/*         </a> */}
-                            {/*         <a href={profiles.steamUrl} target="_blank" rel="noopener noreferrer" */}
-                            {/*             className="mx-4 text-white hover:text-slate-400"> */}
-                            {/*             <FaSteam size="2em" /> */}
-                            {/*         </a> */}
-                            {/*         <a href={profiles.instagramUrl} target="_blank" rel="noopener noreferrer" */}
-                            {/*             className="mx-4 text-pink-400 hover:text-pink-600"> */}
-                            {/*             <FaInstagram size="2em" /> */}
-                            {/*         </a> */}
-                            {/*     </div> */}
-                            {/* </div> */}
                         </div>
                     )}
                 </>
