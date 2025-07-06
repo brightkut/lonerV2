@@ -1,15 +1,16 @@
-import {educations, experiences, skills} from "../constant/index";
-import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component'
+import { educations, experiences, skills } from "../constant/index";
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
-import {loadSnowPreset} from "tsparticles-preset-snow";
+import { loadSnowPreset } from "tsparticles-preset-snow";
 import Particles from "react-particles";
 import Footer from "../components/Footer.jsx";
-import {useTheme} from "../theme/ThemeContext.jsx";
+import ChatBot from "../components/Chatbot.jsx";
+import { useTheme } from "../theme/ThemeContext.jsx";
 import Navbar from "../components/Navbar.jsx";
-import React, {useCallback} from "react";
-import {soundoff, soundon} from "../assets/icons/index.js";
-import {profile} from "../assets/images/index.js";
-import {Link} from "react-router-dom";
+import React, { useCallback } from "react";
+import { soundoff, soundon } from "../assets/icons/index.js";
+import { profile } from "../assets/images/index.js";
+import { Link } from "react-router-dom";
 
 const options = {
     "fullScreen": {
@@ -123,7 +124,7 @@ const options = {
     },
 };
 
-const About = ({isPlayingMusic , setIsPlayingMusic})=>{
+const About = ({ isPlayingMusic, setIsPlayingMusic }) => {
     const { theme } = useTheme();
 
     const getAge = useCallback((birthDateStr) => {
@@ -147,30 +148,30 @@ const About = ({isPlayingMusic , setIsPlayingMusic})=>{
     const customInit = async (engine) => {
         await loadSnowPreset(engine);
     }
-    return(
+    return (
         <>
-            <Navbar/>
+            <Navbar />
             <section className="max-container">
                 <h1 className="head-text">
-                <span
-                    className="blue-gradient_text2 dark:yellow-gradient_text font-semibold drop-shadow">Who am I ?</span>
+                    <span
+                        className="blue-gradient_text2 dark:yellow-gradient_text font-semibold drop-shadow">Who am I ?</span>
                 </h1>
 
                 <div className="mt-5 text-slate-500 dark:text-slate-300">
                     <div className="relative flex justify-center items-center mt-12 mb-12 w-full ">
                         <div className="absolute inset-0 z-0 h-full w-full">
-                            <Particles options={options} init={customInit}/>
+                            <Particles options={options} init={customInit} />
                         </div>
 
                         <div className="relative z-10 flex justify-center items-center">
                             <img src={profile}
-                                 alt="profile"
-                                 className='profile rounded-full w-64 h-64 object-cover hadow-gray-glow dark:shadow-white-glow'
+                                alt="profile"
+                                className='profile rounded-full w-64 h-64 object-cover hadow-gray-glow dark:shadow-white-glow'
                             />
                         </div>
                     </div>
                     Hello! I’m <span
-                    className="text-blue-500 dark:text-yellow-400 font-semibold drop-shadow">Bright 🇹🇭</span>, a
+                        className="text-blue-500 dark:text-yellow-400 font-semibold drop-shadow">Bright 🇹🇭</span>, a
                     software
                     engineer with a passion for learning and exploring new things at {getAge("1997/03/29")}.
                     I enjoy coding and gaming in my free time—especially Dota 2.
@@ -188,7 +189,7 @@ const About = ({isPlayingMusic , setIsPlayingMusic})=>{
                             <Link to={skill.link} key={skill.name} className="no-underline">
                                 <div className="flex-col w-20 justify-center">
                                     <div className='block-container w-20 h-20'>
-                                        <div className='btn-back rounded-xl bg-slate-200'/>
+                                        <div className='btn-back rounded-xl bg-slate-200' />
                                         <div className='btn-front rounded-xl flex justify-center items-center bg-slate-200'>
                                             <img
                                                 src={skill.imageUrl}
@@ -222,7 +223,7 @@ const About = ({isPlayingMusic , setIsPlayingMusic})=>{
                                 key={education.location_name}
                                 date={education.date}
                                 dateClassName="text-black dark:text-white font-semibold"
-                                iconStyle={{background: education.iconBg}}
+                                iconStyle={{ background: education.iconBg }}
                                 icon={
                                     <div className='flex justify-center items-center w-full h-full'>
                                         <img
@@ -290,7 +291,7 @@ const About = ({isPlayingMusic , setIsPlayingMusic})=>{
                                 key={experience.company_name}
                                 date={experience.date}
                                 dateClassName="text-black dark:text-white font-semibold"
-                                iconStyle={{background: experience.iconBg}}
+                                iconStyle={{ background: experience.iconBg }}
                                 icon={
                                     <div className='flex justify-center items-center w-full h-full'>
                                         <img
@@ -339,10 +340,10 @@ const About = ({isPlayingMusic , setIsPlayingMusic})=>{
                     </VerticalTimeline>
                 </div>
 
-                <hr className='border-slate-200 mt-10'/>
+                <hr className='border-slate-200 mt-10' />
 
             </section>
-            <Footer/>
+            <Footer />
             <div className="w-1/2 h-ful pr-8">
                 <div className="fixed bottom-2 left-2">
                     <img
@@ -353,6 +354,7 @@ const About = ({isPlayingMusic , setIsPlayingMusic})=>{
                     />
                 </div>
             </div>
+            <ChatBot />
         </>
     )
 }

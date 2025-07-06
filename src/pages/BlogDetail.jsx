@@ -3,6 +3,7 @@ import { soundoff, soundon } from '../assets/icons/index.js'
 import { useTheme } from "../theme/ThemeContext.jsx";
 import Footer from "../components/Footer.jsx";
 import Navbar from "../components/Navbar.jsx";
+import ChatBot from "../components/Chatbot.jsx";
 import { useEffect, useState } from "react";
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm'
@@ -15,7 +16,6 @@ const BlogDetail = ({ isPlayingMusic, setIsPlayingMusic }) => {
     const [content, setContent] = useState('');
 
     useEffect(() => {
-        console.log(fileName)
         fetch(`/blog/${fileName}.md`)
             .then((res) => res.text())
             .then((text) => setContent(text));
@@ -60,6 +60,7 @@ const BlogDetail = ({ isPlayingMusic, setIsPlayingMusic }) => {
                     />
                 </div>
             </div>
+            <ChatBot />
         </>
     )
 }

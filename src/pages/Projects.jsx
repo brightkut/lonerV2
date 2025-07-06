@@ -4,6 +4,7 @@ import { arb, ary, soundoff, soundon } from '../assets/icons'
 import { useTheme } from "../theme/ThemeContext.jsx";
 import Footer from "../components/Footer.jsx";
 import Navbar from "../components/Navbar.jsx";
+import ChatBot from "../components/Chatbot.jsx";
 import Particles from "react-particles";
 import { loadSnowPreset } from "tsparticles-preset-snow";
 import React from "react";
@@ -243,6 +244,7 @@ const Projects = ({ isPlayingMusic, setIsPlayingMusic }) => {
                     />
                 </div>
             </div>
+            <ChatBot />
         </>
     )
 }

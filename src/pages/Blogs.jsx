@@ -4,6 +4,7 @@ import { soundoff, soundon } from '../assets/icons/index.js'
 import { useTheme } from "../theme/ThemeContext.jsx";
 import Footer from "../components/Footer.jsx";
 import Navbar from "../components/Navbar.jsx";
+import ChatBot from "../components/Chatbot.jsx";
 import { useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
@@ -55,6 +56,7 @@ const Blogs = ({ isPlayingMusic, setIsPlayingMusic }) => {
                     />
                 </div>
             </div>
+            <ChatBot />
         </>
     )
 }
